@@ -19,7 +19,7 @@
 		<!--  SEARCH FORM -->
 		<header class="header">
 			
-			<form class="search-bar">
+			<form action="/" method="GET" class="search-bar" id='search-form'>
 				<input type="search-name" class="contact-search" name="search-area" placeholder="Search">
 			</form>
 
@@ -30,7 +30,7 @@
 		<!--  CONTACT LIST -->
 		<section class="contacts-library">
 			<ul class="contacts-list">
-				{% for contact in contacts %}
+				{% for contact in contacts reversed %}
 				<a href="{% url 'profile' contact.id %}">
 					<div class="contact-section">
 						<li class="list__item">
